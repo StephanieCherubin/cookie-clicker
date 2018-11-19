@@ -1,4 +1,4 @@
-# cookie-clicker
+# cookie-clicker 🍪
 
 Here are a few user stories for Make Cookies:
 
