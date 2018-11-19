@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cookie Clicker</title>
+  </head>
+  <body>
+
+    <h1 id="cookie-counter">0</h1>
+    <button id="cookie-clicker" type="button" name="button">
+      Make Cookies
+    </button>
+    <hr>
+
+    <h2>Shop</h2>
+
+    <hr>
+
+    <p>Click Power</p>
+    <p>Produces
+      <span id="click-power-multiple">1</span>
+      cookie(s) per click
+    </p>
+    <button id="buy-click-power">Buy for
+      <span id="click-power-price">50</span>
+    </button>
+    <p>level: <span id="click-power-level">1</span></p>
+    <script type="text/javascript">
+      //declare default variables
+      let cookieCount = 0;
+      let clickPower = 1;
+
+      //declare DOM variables
+      let cookieCounter = document.getElementById('cookie-counter');
+      let cookieClicker = document.getElementById('cookie-clicker');
+
+      cookieCounter.innerHTML = cookieCount;
+
+      //everytime a user clicks the button, their cookies are increased by the value of their clickPower.
+      cookieClicker.addEventListener("click", function () {
+        cookieCount = cookieCount + clickPower;
+        cookieCounter.innerHTML = cookieCount;
+      })
+
+      //default variables
+      let clickPowerPriceAmount = 50;
+      let clickPowerLevelNumber = 1;
+
+      //declare DOM variables
+      let buyClickPower = document.getElementById('buy-click-power');
+      let clickPowerPrice = document.getElementById('click-power-price');
+      let clickPowerLevel = document.getElementById('click-power-level');
+      let clickPowerMultiple = document.getElementById('click-power-multiple');
+    </script>
+  </body>
+</html>
