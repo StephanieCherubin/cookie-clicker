@@ -37,9 +37,9 @@
       cookieCounter.innerHTML = cookieCount;
 
       //everytime a user clicks the button, their cookies are increased by the value of their clickPower.
-      cookieClicker.addEventListener("click", function () {
+      cookieClicker.addEventListener("click", function() {
         cookieCount = cookieCount + clickPower;
-        cookieCounter.innerHTML = cookieCount;
+        refreshCookieCount()
       })
 
       //default variables
@@ -51,6 +51,33 @@
       let clickPowerPrice = document.getElementById('click-power-price');
       let clickPowerLevel = document.getElementById('click-power-level');
       let clickPowerMultiple = document.getElementById('click-power-multiple');
+
+      //Buy click power
+      buyClickPower.addEventListener("click", function() {
+        if (cookieCount >= clickPowerPriceAmount) {
+          //subtract cookies from the price of the item
+          cookieCount -= clickPowerPriceAmount;
+          refreshCookieCount()
+
+          //Upgrade power level
+          clickPowerLevelNumber += 1;
+
+          //Update click price
+          clickPowerPrice = Math.floor(clickPowerPrice * 1.33);
+
+          //update Click Power
+          clickPower += 1;
+
+          //refresh shop item
+          refreshPowerClick();
+        }
+      });
+
+      let refreshPowerClick = function() {
+        clickPowerLevel.innterHTML = clickPowerLevelNumber;
+        clickPowerPrice.innerHTML = clickPowerPriceAmount;
+        clickPowerMultiple.innerHTML = clickPower;
+      }
     </script>
   </body>
 </html>
