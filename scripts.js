@@ -1,3 +1,9 @@
+/********************************
+
+        COOKIE clicker
+
+********************************/
+
 //declare default variables
 let cookieCount = 0;
 let clickPower = 1;
@@ -14,6 +20,11 @@ cookieClicker.addEventListener("click", function() {
   refreshCookieCount()
 })
 
+/********************************
+
+        Click Power
+
+********************************/
 // refresh cookie count
 let refreshCookieCount = function() {
   cookieCounter.innerHTML = cookieCount;
@@ -55,3 +66,19 @@ let refreshPowerClick = function() {
   clickPowerPrice.innerHTML = clickPowerPriceAmount;
   clickPowerMultiple.innerHTML = clickPower;
 }
+
+/********************************
+
+          Grandmas
+
+********************************/
+//set default values
+let grandmaPower = 50;
+let grandmaPriceAmount = 500;
+let grandmaLevelNumber = 0;
+
+//declare DOM variables
+let buyGrandma = document.getElementById('buy-grandma');
+let grandmaPrice = document.getElementById('grandma-price');
+let grandmaLevel = document.getElementById('grandma-level');
+let grandmaMultiple = document.getElementById('grandma-multiple');
