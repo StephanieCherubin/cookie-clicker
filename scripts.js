@@ -82,3 +82,20 @@ let buyGrandma = document.getElementById('buy-grandma');
 let grandmaPrice = document.getElementById('grandma-price');
 let grandmaLevel = document.getElementById('grandma-level');
 let grandmaMultiple = document.getElementById('grandma-multiple');
+
+//buy a grandma
+buyGrandma.addEventListener("click", function() {
+
+  //make sure we have enough cookies and subtract our cookies from the price
+
+  //upgrade power level
+
+  //update price
+
+  //update grandma power
+
+  //turn autoGrandma on!
+
+  //refresh shop item
+
+})
