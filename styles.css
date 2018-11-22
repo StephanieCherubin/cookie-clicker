@@ -1,0 +1,90 @@
+body {
+  background-color: rgb(175, 110, 50);
+}
+/***********
+NAVBAR
+***********/
+ul {
+    list-style: none;
+}
+
+.navbar {
+  z-index: 10;
+  width: 100%;
+}
+
+.nav-links {
+  height: 50px;
+  width: 100%;
+  /* background: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: roboto;
+}
+
+.nav-btn {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  margin-left: 2rem;
+  transition: all 200ms;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
+.nav-btn.logo {
+  transition: all 300ms;
+}
+
+.nav-btn.logo:hover {
+  transform: scale(1.1) rotate(5deg) translateX(10px);
+}
+
+.nav-btn.right {
+  margin-left: 80%;
+  transition: all 300ms;
+}
+
+.nav-btn.right:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/***********
+Body
+***********/
+h2 {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: transparent;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  color: rgb(105, 60, 50);
+}
